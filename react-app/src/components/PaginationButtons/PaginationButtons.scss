@@ -1,0 +1,41 @@
+.switch-pagination__btn {
+  padding: 3px;
+  background: linear-gradient(143deg, #b977ff 0%, #60269e 100%);
+  min-width: 50px;
+  min-height: 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .switch-pagination__icon {
+    width: 22px;
+  }
+}
+
+.switch-pagination__current-page {
+  margin: 0px 10px 0px 20px;
+  color: #60269e;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.switch-pagination__slash {
+  color: #60269e;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.switch-pagination__last-page {
+  margin: 0px 20px 0px 10px;
+  color: #60269e;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}

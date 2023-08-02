@@ -1,0 +1,29 @@
+.endless-loading__column {
+  flex: 0 1 25%;
+  margin: 0px 0px 30px 0px;
+  padding: 0px 15px;
+
+  .endless-loading__item {
+    padding: 15px;
+    background: #fff;
+    box-shadow: 2px 11px 15px 0px rgba(51, 51, 51, 0.15),
+      -2px -11px 15px 0px rgba(96, 38, 158, 0.15);
+    border-radius: 5px;
+    cursor: pointer;
+
+    .endless-loading__image img {
+      margin: 0px 0px 15px 0px;
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .endless-loading__title {
+      color: #60269e;
+      text-align: center;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+}

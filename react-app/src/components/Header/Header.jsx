@@ -11,10 +11,10 @@ const Header = () => {
             RickAndMorty
           </Link>
           <nav className="header__navigation">
-            <Link to="endless-loading" className="header__link">
+            <Link to="/endless-loading" className="header__link">
               EndlessLoading
             </Link>
-            <Link to="pagination" className="header__link">
+            <Link to="/pagination" className="header__link">
               Pagination
             </Link>
           </nav>
