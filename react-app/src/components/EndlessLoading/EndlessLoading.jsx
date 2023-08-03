@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../Header/Header.jsx";
 import Characters from "../Characters/Characters.jsx";
+import Loader from "../Loader/Loader.jsx";
 import "./EndlessLoading.scss";
 
 const EndlessLoading = () => {
@@ -20,6 +21,9 @@ const EndlessLoading = () => {
           setCurrentPage((prevState) => prevState + 1);
           setTotalCount(response.info.count);
         })
+        .catch((err) => {
+          console.log(err);
+        })
         .finally(() => {
           setFetching(false);
           setLoader(false);
@@ -34,8 +38,8 @@ const EndlessLoading = () => {
         100 &&
       characters.length < totalCount
     ) {
-      console.log(true);
       setFetching(true);
+      setLoader(true);
     }
   };
 
@@ -53,7 +57,12 @@ const EndlessLoading = () => {
       <div className="endless-loading">
         <div className="endless-loading__container container">
           <div className="endless-loading__body">
-            <Characters characters={characters} />
+            <div className="endless-loading__list">
+              <Characters characters={characters} />
+            </div>
+            <div className="endless-loading__loader">
+              {loader && <Loader />}
+            </div>
           </div>
         </div>
       </div>

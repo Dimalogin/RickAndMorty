@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../Header/Header.jsx";
 import Characters from "../Characters/Characters.jsx";
 import PaginationButtons from "../PaginationButtons/PaginationButtons.jsx";
+import Loader from "../Loader/Loader.jsx";
 import "./Pagination.scss";
 
 const Pagination = () => {
@@ -32,8 +33,13 @@ const Pagination = () => {
         setLastPage(response.info.pages);
         setCharacters(response.results);
       })
+      .catch((err) => {
+        setLastPage(0);
+        setCharacters([]);
+      })
       .finally(() => {
         setLoader(false);
+        setFetching(false);
       });
   }, [fetching]);
 
@@ -46,6 +52,7 @@ const Pagination = () => {
             <div className="pagination__list">
               <Characters characters={characters} />
             </div>
+            <div className="pagination__loader">{loader && <Loader />}</div>
 
             <div className="pagination__switch switch-pagination">
               <PaginationButtons
