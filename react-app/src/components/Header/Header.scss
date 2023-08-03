@@ -39,6 +39,19 @@
     .header__link:not(:last-child) {
       margin-right: 30px;
     }
+
+    .header__link--active {
+      color: #60269e;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration: underline;
+    }
+
+    .header__link--active:not(:last-child) {
+      margin-right: 30px;
+    }
   }
   @media (max-width: 500px) {
     .header__body {

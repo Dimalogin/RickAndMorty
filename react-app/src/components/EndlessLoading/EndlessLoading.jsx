@@ -16,7 +16,6 @@ const EndlessLoading = () => {
       fetch(`https://rickandmortyapi.com/api/character?page=${currentPage}`)
         .then((response) => response.json())
         .then((response) => {
-          console.log(response);
           setCharacters([...characters, ...response.results]);
           setCurrentPage((prevState) => prevState + 1);
           setTotalCount(response.info.count);

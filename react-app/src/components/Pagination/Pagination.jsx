@@ -29,7 +29,6 @@ const Pagination = () => {
     fetch(`https://rickandmortyapi.com/api/character?page=${currentPage}`)
       .then((response) => response.json())
       .then((response) => {
-        console.log(response);
         setLastPage(response.info.pages);
         setCharacters(response.results);
       })

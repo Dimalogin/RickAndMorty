@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Header.scss";
 
 const Header = () => {
@@ -7,16 +7,26 @@ const Header = () => {
     <header className="header">
       <div className="header__container container">
         <div className="header__body">
-          <Link to="/" className="header__logo">
+          <NavLink to="/" className="header__logo">
             RickAndMorty
-          </Link>
+          </NavLink>
           <nav className="header__navigation">
-            <Link to="/endless-loading" className="header__link">
+            <NavLink
+              to="/endless-loading"
+              className={({ isActive }) =>
+                isActive ? "header__link--active" : "header__link"
+              }
+            >
               EndlessLoading
-            </Link>
-            <Link to="/pagination" className="header__link">
+            </NavLink>
+            <NavLink
+              to="/pagination"
+              className={({ isActive }) =>
+                isActive ? "header__link--active" : "header__link"
+              }
+            >
               Pagination
-            </Link>
+            </NavLink>
           </nav>
         </div>
       </div>
