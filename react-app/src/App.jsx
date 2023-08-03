@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
       <div className="app">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/RickAndMorty" element={<Home />} />
           <Route path="/endless-loading" element={<EndlessLoading />} />
           <Route path="/pagination" element={<Pagination />} />
           <Route path="*" element={<NotFoundPage />} />
@@ -21,5 +21,3 @@ function App() {
 }
 
 export default App;
-
-
