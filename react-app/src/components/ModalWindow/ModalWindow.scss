@@ -20,6 +20,7 @@
     background-color: #fff;
     border-radius: 10px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 
     .modal-window__close-btn {
@@ -143,6 +144,19 @@
           line-height: 140.188%;
         }
       }
+    }
+    @media (max-width: 520px) {
+      .modal-window__info {
+        padding: 20px 0px 0px 0px;
+      }
+    }
+  }
+
+  @media (max-width: 520px) {
+    .modal-window__body {
+      min-width: 280px;
+      flex-direction: column;
+      align-items: center;
     }
   }
 }
